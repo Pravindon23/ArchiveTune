@@ -2487,7 +2487,7 @@ private fun V8Artwork(
         modifier =
             Modifier
                 .size(size)
-                .clip(RoundedCornerShape(8.dp))
+                .clip(RoundedCornerShape(6.dp))
                 .background(Color.White.copy(alpha = 0.08f)),
     ) {
         AsyncImage(
@@ -2531,7 +2531,7 @@ private fun V8MetadataActions(
         ) {
             Text(
                 text = title,
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.headlineSmall,
                 fontWeight = FontWeight.Bold,
                 color = foreground,
                 maxLines = 1,
@@ -2626,7 +2626,7 @@ private fun V8PlaybackProgress(
             valueRange = 0f..safeDuration.coerceAtLeast(0f),
             activeColor = foreground.copy(alpha = 0.88f),
             inactiveColor = foreground.copy(alpha = 0.32f),
-            trackHeight = 9.dp,
+            trackHeight = 4.dp,
             onValueChange = { onSliderValueChange(it.toLong()) },
             onValueChangeFinished = onSliderValueChangeFinished,
             enabled = safeDuration > 0f,
